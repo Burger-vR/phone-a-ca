@@ -6,14 +6,13 @@ const Hero = () => {
     <section className="relative overflow-hidden bg-gradient-to-br from-primary via-primary-glow to-secondary py-20 md:py-32">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 backdrop-blur-sm">
-            <Phone className="h-4 w-4 text-white" />
-            <span className="text-sm font-medium text-white">Phone-a-CA</span>
-          </div>
-          
-          <h1 className="mb-6 text-4xl md:text-6xl font-bold text-white leading-tight">
-            A finance expert in your pocket
+          <h1 className="mb-4 text-5xl md:text-7xl font-bold text-white leading-tight">
+            Phone-a-CA
           </h1>
+          
+          <p className="mb-6 text-xl md:text-2xl text-white/90 font-medium">
+            A finance expert in your pocket
+          </p>
           
           <p className="mb-8 text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
             Running a business is demanding — keeping on top of your finances shouldn't be.
