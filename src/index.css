@@ -17,11 +17,11 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 215 25% 15%;
 
-    --primary: 200 95% 25%;
+    --primary: 210 85% 20%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 200 90% 35%;
+    --primary-glow: 210 80% 30%;
 
-    --secondary: 195 80% 50%;
+    --secondary: 205 75% 38%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 210 20% 93%;
@@ -39,7 +39,7 @@ All colors MUST be HSL.
 
     --radius: 0.75rem;
     
-    --gradient-hero: linear-gradient(135deg, hsl(200 95% 25%) 0%, hsl(195 80% 50%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(210 85% 20%) 0%, hsl(205 75% 38%) 100%);
     --gradient-card: linear-gradient(to bottom, hsl(0 0% 100%) 0%, hsl(210 25% 99%) 100%);
     --shadow-elegant: 0 10px 40px -10px hsl(200 95% 25% / 0.15);
     --shadow-hover: 0 20px 50px -10px hsl(200 95% 25% / 0.25);
@@ -72,11 +72,11 @@ All colors MUST be HSL.
     --popover: 215 28% 12%;
     --popover-foreground: 210 25% 95%;
 
-    --primary: 195 80% 50%;
-    --primary-foreground: 215 30% 8%;
-    --primary-glow: 195 75% 60%;
+    --primary: 205 75% 38%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 205 70% 48%;
 
-    --secondary: 200 95% 25%;
+    --secondary: 210 85% 20%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 215 25% 18%;
@@ -92,7 +92,7 @@ All colors MUST be HSL.
     --input: 215 25% 20%;
     --ring: 195 80% 50%;
     
-    --gradient-hero: linear-gradient(135deg, hsl(200 95% 20%) 0%, hsl(195 80% 35%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(210 85% 18%) 0%, hsl(205 75% 32%) 100%);
     --gradient-card: linear-gradient(to bottom, hsl(215 28% 12%) 0%, hsl(215 25% 14%) 100%);
     --shadow-elegant: 0 10px 40px -10px hsl(0 0% 0% / 0.3);
     --shadow-hover: 0 20px 50px -10px hsl(0 0% 0% / 0.5);
