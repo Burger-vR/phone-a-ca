@@ -25,9 +25,12 @@ const Hero = () => {
             <Button 
               size="lg" 
               className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg hover:shadow-xl transition-all"
+              asChild
             >
-              <Phone className="mr-2 h-5 w-5" />
-              Call Us Now
+              <a href="tel:+27781347607">
+                <Phone className="mr-2 h-5 w-5" />
+                Call Us Now
+              </a>
             </Button>
             <Button 
               size="lg" 

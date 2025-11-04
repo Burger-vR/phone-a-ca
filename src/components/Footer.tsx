@@ -17,9 +17,12 @@ const Footer = () => {
             <Button 
               size="lg" 
               className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg"
+              asChild
             >
-              <Phone className="mr-2 h-5 w-5" />
-              Call us
+              <a href="tel:+27781347607">
+                <Phone className="mr-2 h-5 w-5" />
+                Call us
+              </a>
             </Button>
             <Button 
               size="lg" 
