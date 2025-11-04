@@ -58,13 +58,13 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 bg-[#1a1a1a]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
             What We Offer
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-white/70 max-w-2xl mx-auto">
             Comprehensive financial expertise across all aspects of your business
           </p>
         </div>
@@ -73,21 +73,21 @@ const Services = () => {
           {services.map((service) => (
             <Card
               key={service.title}
-              className="group hover:shadow-[var(--shadow-hover)] transition-all duration-300 border-border bg-gradient-to-b from-card to-muted/30"
+              className="group hover:shadow-[var(--shadow-hover)] transition-all duration-300 border-white/10 bg-gradient-to-b from-[#2a2a2a] to-[#222222]"
             >
               <CardHeader>
                 <div className="mb-4 inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all">
                   <service.icon className="h-6 w-6" />
                 </div>
-                <CardTitle className="text-2xl mb-2">{service.title}</CardTitle>
-                <p className="text-sm text-muted-foreground">{service.subtitle}</p>
+                <CardTitle className="text-2xl mb-2 text-white">{service.title}</CardTitle>
+                <p className="text-sm text-white/60">{service.subtitle}</p>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2">
                   {service.items.map((item) => (
                     <li key={item} className="flex items-start gap-2 text-sm">
                       <span className="text-secondary mt-1">✓</span>
-                      <span className="text-foreground/80">{item}</span>
+                      <span className="text-white/80">{item}</span>
                     </li>
                   ))}
                 </ul>
