@@ -51,7 +51,7 @@ const HowItWorks = () => {
               
               <div className="relative mb-8">
                 {/* Number badge */}
-                <div className="absolute -top-4 -right-4 w-14 h-14 rounded-full bg-gradient-to-br from-accent to-accent/70 flex items-center justify-center text-white font-bold text-lg shadow-lg z-10">
+                <div className="absolute -top-4 -left-4 w-14 h-14 rounded-full bg-gradient-to-br from-accent to-accent/70 flex items-center justify-center text-white font-bold text-lg shadow-lg z-10">
                   {step.number}
                 </div>
                 
