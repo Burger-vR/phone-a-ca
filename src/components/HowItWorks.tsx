@@ -50,11 +50,6 @@ const HowItWorks = () => {
               )}
               
               <div className="relative mb-8">
-                {/* Number badge */}
-                <div className="absolute -top-4 -left-4 w-14 h-14 rounded-full bg-gradient-to-br from-accent to-accent/70 flex items-center justify-center text-white font-bold text-lg shadow-lg z-10">
-                  {step.number}
-                </div>
-                
                 {/* Icon container */}
                 <div className="relative mx-auto w-24 h-24 rounded-3xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-[var(--shadow-elegant)] group-hover:shadow-[var(--shadow-hover)] group-hover:scale-110 transition-all duration-300">
                   <step.icon className="h-12 w-12 text-white" strokeWidth={2} />
