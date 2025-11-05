@@ -18,9 +18,7 @@ const Hero = () => {
           </h1>
           
           <p className="mb-10 text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: "0.1s" }}>
-            Running a business is demanding — keeping on top of your finances shouldn't be.
-            Get on-demand access to experienced Chartered Accountants who help you make smart, 
-            confident financial decisions.
+            We provide on-demand, professional financial insight for business owners and leaders who need clarity, not complexity. Our Chartered Accountants advise on everything from financial management and cash flow to processes and reporting — helping you act with confidence and efficiency.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: "0.2s" }}>
