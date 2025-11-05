@@ -34,9 +34,12 @@ const Footer = () => {
               size="lg" 
               variant="outline"
               className="bg-white/10 border-2 border-white/30 text-white hover:bg-white/20 backdrop-blur-md text-base px-8 py-6 rounded-xl font-semibold hover:border-white/50 transition-all"
+              asChild
             >
-              <Calendar className="mr-2 h-5 w-5" />
-              Book online
+              <a href="https://calendar.app.google/jz4xrFXiK1CvdUdA7" target="_blank" rel="noopener noreferrer">
+                <Calendar className="mr-2 h-5 w-5" />
+                Book online
+              </a>
             </Button>
             <Button 
               size="lg" 

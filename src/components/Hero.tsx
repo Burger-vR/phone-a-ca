@@ -9,7 +9,7 @@ const Hero = () => {
           <div className="animate-fade-in">
             <div className="mb-8 inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-2.5 backdrop-blur-md border border-white/20 shadow-lg">
               <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-              <span className="text-sm font-semibold text-white tracking-wide">EXPERT ADVICE AVAILABLE NOW</span>
+              <span className="text-sm font-semibold text-white tracking-wide">A FINANCE EXPERT IN YOUR POCKET</span>
             </div>
           </div>
           
@@ -17,17 +17,13 @@ const Hero = () => {
             Phone-a-CA
           </h1>
           
-          <p className="mb-4 text-2xl md:text-3xl text-white/95 font-semibold animate-fade-in" style={{ animationDelay: "0.1s" }}>
-            A finance expert in your pocket
-          </p>
-          
-          <p className="mb-10 text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: "0.2s" }}>
+          <p className="mb-10 text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: "0.1s" }}>
             Running a business is demanding — keeping on top of your finances shouldn't be.
             Get on-demand access to experienced Chartered Accountants who help you make smart, 
             confident financial decisions.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: "0.3s" }}>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: "0.2s" }}>
             <Button 
               size="lg" 
               className="group bg-accent hover:bg-accent/90 text-accent-foreground shadow-2xl hover:shadow-[var(--shadow-glow)] transition-all text-base px-8 py-6 rounded-xl font-semibold"
@@ -43,9 +39,12 @@ const Hero = () => {
               size="lg" 
               variant="outline" 
               className="bg-white/10 border-2 border-white/30 text-white hover:bg-white/20 backdrop-blur-md text-base px-8 py-6 rounded-xl font-semibold hover:border-white/50 transition-all"
+              asChild
             >
-              <Calendar className="mr-2 h-5 w-5" />
-              Book a Session
+              <a href="https://calendar.app.google/jz4xrFXiK1CvdUdA7" target="_blank" rel="noopener noreferrer">
+                <Calendar className="mr-2 h-5 w-5" />
+                Book a Session
+              </a>
             </Button>
           </div>
         </div>
