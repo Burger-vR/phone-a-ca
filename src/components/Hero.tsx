@@ -3,7 +3,7 @@ import { Phone, Calendar, ArrowRight } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-primary via-primary-glow to-secondary py-24 md:py-40">
+    <section id="hero" className="relative overflow-hidden bg-gradient-to-br from-primary via-primary-glow to-secondary py-24 md:py-40">
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <div className="animate-fade-in">
@@ -18,7 +18,7 @@ const Hero = () => {
           </h1>
           
           <p className="mb-10 text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: "0.1s" }}>
-            We provide on-demand, professional financial insight for business owners and leaders who need clarity, not complexity. Our Chartered Accountants advise on everything from financial management and cash flow to processes and reporting — helping you act with confidence and efficiency.
+            On-demand financial expertise from Chartered Accountants. Get clarity on cash flow, reporting, and strategy — no retainers, no complexity.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: "0.2s" }}>

@@ -62,7 +62,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="relative py-24 md:py-32 bg-[#1a1a1a] overflow-hidden">
+    <section id="services" className="relative py-24 md:py-32 bg-[#1a1a1a] overflow-hidden">
       {/* Background mesh gradient */}
       <div className="absolute inset-0 bg-[var(--gradient-mesh)] opacity-50" />
       

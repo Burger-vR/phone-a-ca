@@ -9,7 +9,7 @@ const audiences = [
 
 const WhoWeHelp = () => {
   return (
-    <section className="relative py-24 md:py-32 bg-[#1a1a1a] overflow-hidden">
+    <section id="who-we-help" className="relative py-24 md:py-32 bg-[#1a1a1a] overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 bg-[var(--gradient-mesh)] opacity-30" />
       

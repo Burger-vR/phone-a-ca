@@ -3,7 +3,7 @@ import { Phone, Calendar, MessageCircle, ArrowRight } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="relative overflow-hidden bg-gradient-to-br from-primary via-primary-glow to-secondary py-20 md:py-28">
+    <footer id="footer" className="relative overflow-hidden bg-gradient-to-br from-primary via-primary-glow to-secondary py-20 md:py-28">
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8 animate-fade-in">

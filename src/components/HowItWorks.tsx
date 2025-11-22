@@ -23,7 +23,7 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section className="relative py-24 md:py-32 bg-gradient-to-b from-muted/30 to-background overflow-hidden">
+    <section id="how-it-works" className="relative py-24 md:py-32 bg-gradient-to-b from-muted/30 to-background overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
           <div className="inline-block mb-4">
