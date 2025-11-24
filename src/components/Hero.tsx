@@ -9,7 +9,7 @@ const Hero = () => {
           <div className="animate-fade-in">
             <div className="mb-8 inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-2.5 backdrop-blur-md border border-white/20 shadow-lg">
               <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-              <span className="text-sm font-semibold text-white tracking-wide">A FINANCE EXPERT IN YOUR POCKET</span>
+              <span className="text-sm font-semibold text-white tracking-wide">YOUR ON-CALL FRIEND IN FINANCE</span>
             </div>
           </div>
           
@@ -18,7 +18,7 @@ const Hero = () => {
           </h1>
           
           <p className="mb-10 text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: "0.1s" }}>
-            On-demand financial expertise from Chartered Accountants. Get clarity on cash flow, reporting, and strategy — no retainers, no complexity.
+            Are you a team leader or entrepreneur who needs a finance professional to advise you when you're unsure of the best way forward? From budgeting and cash flow to processes and reporting, our on-demand CAs help you cut through uncertainty and complexity, bringing clarity and confidence to all things finance.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: "0.2s" }}>
