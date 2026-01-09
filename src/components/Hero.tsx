@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Phone, Calendar, ArrowRight } from "lucide-react";
+import { Phone, Calendar, MessageCircle } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -16,35 +16,52 @@ const Hero = () => {
           <h1 className="mb-6 text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight animate-fade-in-up">
             Phone-a-CA
           </h1>
-          
-          <p className="mb-10 text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: "0.1s" }}>
-            Are you a team leader or entrepreneur who needs a finance professional to advise you when you're unsure of the best way forward? From budgeting and cash flow to processes and reporting, our on-demand CAs help you cut through uncertainty and complexity, bringing clarity and confidence to all things finance.
+
+          <p className="mb-10 text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: "0.1s" }}>
+            Instant Chartered Accountant guidance for uncertainties in your organisation's finance function.
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            <Button 
-              size="lg" 
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+            {/* Primary CTA */}
+            <Button
+              size="lg"
               className="group bg-accent hover:bg-accent/90 text-accent-foreground shadow-2xl hover:shadow-[var(--shadow-glow)] transition-all text-base px-8 py-6 rounded-xl font-semibold"
               asChild
             >
-              <a href="tel:+27781347607">
-                <Phone className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
-                Call Us Now
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              <a href="https://wa.me/27781347607" target="_blank" rel="noopener noreferrer">
+                <MessageCircle className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+                Start a conversation
               </a>
             </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
+
+            {/* Secondary CTAs */}
+            <Button
+              size="lg"
+              variant="outline"
+              className="bg-white/10 border-2 border-white/30 text-white hover:bg-white/20 backdrop-blur-md text-base px-8 py-6 rounded-xl font-semibold hover:border-white/50 transition-all"
+              asChild
+            >
+              <a href="tel:+27781347607">
+                <Phone className="mr-2 h-5 w-5" />
+                Call us
+              </a>
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
               className="bg-white/10 border-2 border-white/30 text-white hover:bg-white/20 backdrop-blur-md text-base px-8 py-6 rounded-xl font-semibold hover:border-white/50 transition-all"
               asChild
             >
               <a href="https://calendar.app.google/jz4xrFXiK1CvdUdA7" target="_blank" rel="noopener noreferrer">
                 <Calendar className="mr-2 h-5 w-5" />
-                Book a Session
+                Book online
               </a>
             </Button>
           </div>
+
+          <p className="text-sm md:text-base text-white/60 max-w-2xl mx-auto leading-relaxed italic animate-fade-in" style={{ animationDelay: "0.25s" }}>
+            From cash flow and budgeting to reporting and processes, we provide on-demand, practical guidance to help you make informed finance decisions.
+          </p>
         </div>
       </div>
       

@@ -1,11 +1,13 @@
-import { Home, Users, ListChecks, Briefcase, Award, Phone, ChevronRight } from "lucide-react";
+import { Home, Users, ListChecks, Briefcase, Award, Phone, MoreVertical, User, DollarSign } from "lucide-react";
 
 const navigationItems = [
   { id: "hero", label: "Home", icon: Home },
+  { id: "about", label: "About", icon: User },
   { id: "who-we-help", label: "Who We Help", icon: Users },
   { id: "how-it-works", label: "How It Works", icon: ListChecks },
   { id: "services", label: "Services", icon: Briefcase },
   { id: "why-choose", label: "Why Choose Us", icon: Award },
+  { id: "pricing", label: "Pricing", icon: DollarSign },
   { id: "footer", label: "Contact", icon: Phone },
 ];
 
@@ -22,8 +24,8 @@ const NavigationSidebar = () => {
       {/* Hover trigger area */}
       <div className="flex items-center">
         {/* Collapsed button indicator */}
-        <div className="w-6 h-12 bg-accent rounded-r-lg shadow-lg group-hover:opacity-0 transition-opacity duration-300 flex items-center justify-center">
-          <ChevronRight className="w-4 h-4 text-accent-foreground" />
+        <div className="w-8 h-16 bg-accent rounded-r-lg shadow-lg group-hover:opacity-0 transition-opacity duration-300 flex items-center justify-center">
+          <MoreVertical className="w-6 h-6 text-accent-foreground" strokeWidth={2.5} />
         </div>
 
         {/* Expanded sidebar */}

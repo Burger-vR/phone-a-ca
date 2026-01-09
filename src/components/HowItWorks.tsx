@@ -1,43 +1,46 @@
-import { Phone, MessageSquare, CreditCard } from "lucide-react";
+import { Phone, MessageSquare, CreditCard, Lightbulb } from "lucide-react";
 
 const steps = [
   {
-    icon: Phone,
     number: "01",
-    title: "Call or book a session",
-    description: "Connect directly with a Chartered Accountant",
+    icon: Phone,
+    title: "Connect with a CA",
+    description: "Call, book, or chat with a Chartered Accountant",
   },
   {
-    icon: MessageSquare,
     number: "02",
+    icon: MessageSquare,
     title: "Discuss your need",
-    description: "Budgeting, cash flow, tax, systems, or strategy",
+    description: "Share your finance challenge or question",
   },
   {
-    icon: CreditCard,
     number: "03",
-    title: "Pay only for the time you use",
-    description: "Expert advice, on your terms",
+    icon: Lightbulb,
+    title: "Collaborate and receive expert advice",
+    description: "Work together to find practical solutions",
+  },
+  {
+    number: "04",
+    icon: CreditCard,
+    title: "Pay only for time used",
+    description: "Transparent pricing with no hidden fees",
   },
 ];
 
 const HowItWorks = () => {
   return (
-    <section id="how-it-works" className="relative py-24 md:py-32 bg-gradient-to-b from-muted/30 to-background overflow-hidden">
+    <section id="how-it-works" className="relative py-24 md:py-32 bg-[#1a1a1a] overflow-hidden">
+      {/* Background mesh gradient */}
+      <div className="absolute inset-0 bg-[var(--gradient-mesh)] opacity-50" />
+
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
-          <div className="inline-block mb-4">
-            <span className="text-sm font-semibold text-secondary tracking-wider uppercase">Simple Process</span>
-          </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">
             How It Works
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Getting expert financial advice is simple and straightforward
-          </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 lg:gap-12 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 max-w-7xl mx-auto">
           {steps.map((step, index) => (
             <div 
               key={step.title} 
@@ -50,29 +53,30 @@ const HowItWorks = () => {
               )}
               
               <div className="relative mb-8">
+                {/* Step number */}
+                <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-accent flex items-center justify-center text-white font-bold text-lg shadow-lg z-10">
+                  {step.number}
+                </div>
+
                 {/* Icon container */}
-                <div className="relative mx-auto w-24 h-24 rounded-3xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-[var(--shadow-elegant)] group-hover:shadow-[var(--shadow-hover)] group-hover:scale-110 transition-all duration-300">
+                <div className="relative mx-auto w-24 h-24 rounded-3xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-[var(--shadow-elegant)] group-hover:shadow-[var(--shadow-hover)] group-hover:scale-110 transition-all duration-300 mt-8">
                   <step.icon className="h-12 w-12 text-white" strokeWidth={2} />
-                  
+
                   {/* Glow effect */}
                   <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary to-secondary opacity-0 group-hover:opacity-50 blur-xl transition-opacity duration-300" />
                 </div>
               </div>
               
-              <h3 className="text-xl md:text-2xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors">
+              <h3 className="text-xl md:text-2xl font-bold mb-3 text-white group-hover:text-accent transition-colors">
                 {step.title}
               </h3>
-              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+              <p className="text-base md:text-lg text-white/70 leading-relaxed">
                 {step.description}
               </p>
             </div>
           ))}
         </div>
       </div>
-      
-      {/* Decorative elements */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl" />
     </section>
   );
 };
