@@ -13,6 +13,7 @@ const pricingPlan = {
     "Phone, video, or in-person",
     "Same-day availability (subject to capacity)",
     "Pay only for time used",
+    "Billed in 10 minute increments",
   ],
   gradient: "from-primary/20 to-secondary/20",
 };
@@ -46,20 +47,20 @@ const Pricing = () => {
               </div>
 
               <div className="text-center mt-6">
-                <div className="flex items-baseline justify-center gap-3">
-                  <div className="flex items-baseline gap-1">
-                    <span className="text-3xl md:text-4xl font-bold text-muted-foreground line-through">
+                <div className="flex items-baseline justify-center gap-2 sm:gap-3 flex-wrap">
+                  <div className="flex items-baseline gap-1 whitespace-nowrap">
+                    <span className="text-2xl sm:text-3xl md:text-4xl font-bold text-muted-foreground line-through">
                       {pricingPlan.price}
                     </span>
-                    <span className="text-lg text-muted-foreground line-through">
+                    <span className="text-base sm:text-lg text-muted-foreground line-through">
                       {pricingPlan.unit}
                     </span>
                   </div>
-                  <div className="flex items-baseline gap-1">
-                    <span className="text-5xl md:text-6xl font-bold text-accent">
+                  <div className="flex items-baseline gap-1 whitespace-nowrap">
+                    <span className="text-4xl sm:text-5xl md:text-6xl font-bold text-accent">
                       R600
                     </span>
-                    <span className="text-xl text-accent">
+                    <span className="text-lg sm:text-xl text-accent">
                       {pricingPlan.unit}
                     </span>
                   </div>
@@ -68,11 +69,11 @@ const Pricing = () => {
             </CardHeader>
 
             <CardContent className="relative z-10">
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-3 mb-8 flex flex-col items-center">
                 {pricingPlan.features.map((feature) => (
-                  <li key={feature} className="flex items-start gap-3">
+                  <li key={feature} className="flex items-start gap-3 justify-center max-w-md w-full">
                     <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" strokeWidth={3} />
-                    <span className="text-foreground text-sm leading-relaxed">
+                    <span className="text-foreground text-sm leading-relaxed text-left flex-1">
                       {feature}
                     </span>
                   </li>

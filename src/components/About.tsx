@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Award, BookOpen, Target, Users, User } from "lucide-react";
 import {
   HoverCard,
@@ -30,139 +31,204 @@ const highlights = [
 ];
 
 const About = () => {
+  const [mobileActiveFounder, setMobileActiveFounder] = useState<'burger' | 'anne' | null>(null);
+
+  const toggleMobileFounder = (founder: 'burger' | 'anne') => {
+    setMobileActiveFounder(mobileActiveFounder === founder ? null : founder);
+  };
+
   return (
     <section id="about" className="relative py-24 md:py-32 bg-gradient-to-b from-background to-muted/30 overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16 animate-fade-in">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12 animate-fade-in">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
               Meet the Founders
             </h2>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-            {/* Content - Left side */}
-            <div className="space-y-6 animate-fade-in order-2 lg:order-1">
-              <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
-                <p>
-                  Hello there! Burger and Anne van Rooyen here. We co-founded Phone-a-CA in 2025 with a simple vision:
-                  to make high-quality organisational finance advisory services accessible at a competitive price.
-                </p>
+          {/* Founders Photo - Centered */}
+          <div className="flex justify-center mb-12 animate-fade-in" style={{ animationDelay: "0.1s" }}>
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-border max-w-sm">
+              <img
+                src="/founders-photo.jpg"
+                alt="Burger and Anne van Rooyen - Founders of Phone-a-CA"
+                className="w-full h-auto object-contain"
+              />
+            </div>
+          </div>
 
-                <p>
-                  We believe that entrepreneurs, team leaders, pastors, and principals make better decisions—and
-                  build healthier organisations—when they have access to trusted Chartered Accountants who
-                  understand numbers, businesses, and people.
-                </p>
+          {/* Content */}
+          <div className="space-y-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+            <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
+              <p>
+                Hello there! Burger and Anne van Rooyen here. We <strong>co-founded Phone-a-CA in 2025</strong> with a simple vision:
+                to make <strong>high-quality organisational finance advisory services accessible at a competitive price</strong>.
+              </p>
 
-                <p>
-                  Phone-a-CA exists to support you with practical, professional finance guidance, so you can
-                  grow what you're building with confidence.
-                </p>
+              <p>
+                We believe that entrepreneurs, team leaders, pastors, and principals make better decisions—and
+                build healthier organisations—when they have access to <strong>trusted Chartered Accountants</strong> who
+                understand numbers, businesses, and people.
+              </p>
 
-                <p>
-                  This is just the beginning. We're excited to journey with South Africans, Africans, and every
-                  nation we encounter, as we partner with leaders to build organisations that contribute to a
-                  better world.
-                </p>
+              <p>
+                Phone-a-CA exists to support you with <strong>practical, professional finance guidance</strong>, so you can
+                grow what you're building with confidence.
+              </p>
 
-                <p className="text-xl font-semibold text-foreground pt-2">
-                  Chat soon,<br />
-                  Burger and Anne
-                </p>
-              </div>
+              <p>
+                This is just the beginning. We're excited to journey with South Africans, Africans, and every
+                nation we encounter, as we partner with leaders to build organisations that contribute to a
+                better world.
+              </p>
 
-              {/* Founder Action Buttons - directly below text */}
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                {/* Burger HoverCard */}
-                <HoverCard openDelay={200}>
-                  <HoverCardTrigger asChild>
-                    <Button
-                      size="lg"
-                      variant="outline"
-                      className="text-base px-8 py-6 rounded-xl font-semibold hover:border-primary/50 transition-all cursor-pointer"
-                    >
-                      <User className="mr-2 h-5 w-5" />
-                      About Burger
-                    </Button>
-                  </HoverCardTrigger>
-                  <HoverCardContent className="w-80 sm:w-96" side="top" align="center">
-                    <div className="space-y-3">
-                      <div>
-                        <h4 className="text-xl font-bold text-foreground mb-1">Burger van Rooyen</h4>
-                        <p className="text-sm font-semibold text-primary">Qualified Chartered Accountant</p>
-                      </div>
-                      <div>
-                        <h5 className="font-semibold text-foreground mb-2 text-sm">Experience:</h5>
-                        <ul className="space-y-1.5 text-sm text-muted-foreground">
-                          <li className="flex items-start gap-2">
-                            <span className="text-primary mt-0.5">•</span>
-                            <span>External auditing (financial services, retail and manufacturing)</span>
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <span className="text-primary mt-0.5">•</span>
-                            <span>General financial management</span>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </HoverCardContent>
-                </HoverCard>
-
-                {/* Anne HoverCard */}
-                <HoverCard openDelay={200}>
-                  <HoverCardTrigger asChild>
-                    <Button
-                      size="lg"
-                      variant="outline"
-                      className="text-base px-8 py-6 rounded-xl font-semibold hover:border-primary/50 transition-all cursor-pointer"
-                    >
-                      <User className="mr-2 h-5 w-5" />
-                      About Anne
-                    </Button>
-                  </HoverCardTrigger>
-                  <HoverCardContent className="w-80 sm:w-96" side="top" align="center">
-                    <div className="space-y-3">
-                      <div>
-                        <h4 className="text-xl font-bold text-foreground mb-1">Anne van Rooyen</h4>
-                        <p className="text-sm font-semibold text-primary">Industrial Engineer</p>
-                      </div>
-                      <div>
-                        <h5 className="font-semibold text-foreground mb-2 text-sm">Experience:</h5>
-                        <ul className="space-y-1.5 text-sm text-muted-foreground">
-                          <li className="flex items-start gap-2">
-                            <span className="text-primary mt-0.5">•</span>
-                            <span>Data management</span>
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <span className="text-primary mt-0.5">•</span>
-                            <span>Product management</span>
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <span className="text-primary mt-0.5">•</span>
-                            <span>Information systems</span>
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <span className="text-primary mt-0.5">•</span>
-                            <span>Startup consulting</span>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </HoverCardContent>
-                </HoverCard>
-              </div>
+              <p className="text-xl font-semibold text-foreground pt-2">
+                Chat soon,<br />
+                Burger and Anne
+              </p>
             </div>
 
-            {/* Founders Photo - Right side */}
-            <div className="animate-fade-in order-1 lg:order-2" style={{ animationDelay: "0.1s" }}>
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-border">
-                <img
-                  src="/founders-photo.jpg"
-                  alt="Burger and Anne van Rooyen - Founders of Phone-a-CA"
-                  className="w-full h-auto object-contain"
-                />
+            {/* Founder Action Buttons - directly below text */}
+            <div className="space-y-4 pt-4">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  {/* Burger Button - HoverCard on desktop, click on mobile */}
+                  <HoverCard openDelay={200}>
+                    <HoverCardTrigger asChild>
+                      <Button
+                        size="lg"
+                        variant="outline"
+                        className="text-base px-8 py-6 rounded-xl font-semibold hover:border-primary/50 transition-all cursor-pointer"
+                        onClick={() => toggleMobileFounder('burger')}
+                      >
+                        <User className="mr-2 h-5 w-5" />
+                        About Burger
+                      </Button>
+                    </HoverCardTrigger>
+                    <HoverCardContent className="w-80 sm:w-96 hidden md:block" side="top" align="center">
+                      <div className="space-y-3">
+                        <div>
+                          <h4 className="text-xl font-bold text-foreground mb-1">Burger van Rooyen</h4>
+                          <p className="text-sm font-semibold text-primary">Qualified Chartered Accountant</p>
+                        </div>
+                        <div>
+                          <h5 className="font-semibold text-foreground mb-2 text-sm">Experience:</h5>
+                          <ul className="space-y-1.5 text-sm text-muted-foreground">
+                            <li className="flex items-start gap-2">
+                              <span className="text-primary mt-0.5">•</span>
+                              <span>External auditing (financial services, retail and manufacturing)</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span className="text-primary mt-0.5">•</span>
+                              <span>General financial management</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </HoverCardContent>
+                  </HoverCard>
+
+                  {/* Anne Button - HoverCard on desktop, click on mobile */}
+                  <HoverCard openDelay={200}>
+                    <HoverCardTrigger asChild>
+                      <Button
+                        size="lg"
+                        variant="outline"
+                        className="text-base px-8 py-6 rounded-xl font-semibold hover:border-primary/50 transition-all cursor-pointer"
+                        onClick={() => toggleMobileFounder('anne')}
+                      >
+                        <User className="mr-2 h-5 w-5" />
+                        About Anne
+                      </Button>
+                    </HoverCardTrigger>
+                    <HoverCardContent className="w-80 sm:w-96 hidden md:block" side="top" align="center">
+                      <div className="space-y-3">
+                        <div>
+                          <h4 className="text-xl font-bold text-foreground mb-1">Anne van Rooyen</h4>
+                          <p className="text-sm font-semibold text-primary">Industrial Engineer</p>
+                        </div>
+                        <div>
+                          <h5 className="font-semibold text-foreground mb-2 text-sm">Experience:</h5>
+                          <ul className="space-y-1.5 text-sm text-muted-foreground">
+                            <li className="flex items-start gap-2">
+                              <span className="text-primary mt-0.5">•</span>
+                              <span>Data management</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span className="text-primary mt-0.5">•</span>
+                              <span>Product management</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span className="text-primary mt-0.5">•</span>
+                              <span>Information systems</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span className="text-primary mt-0.5">•</span>
+                              <span>Startup consulting</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </HoverCardContent>
+                </HoverCard>
               </div>
+
+              {/* Mobile-only founder info display */}
+              {mobileActiveFounder === 'burger' && (
+                <div className="md:hidden p-6 bg-muted/50 rounded-xl border border-border animate-fade-in">
+                  <div className="space-y-3">
+                    <div>
+                      <h4 className="text-xl font-bold text-foreground mb-1">Burger van Rooyen</h4>
+                      <p className="text-sm font-semibold text-primary">Qualified Chartered Accountant</p>
+                    </div>
+                    <div>
+                      <h5 className="font-semibold text-foreground mb-2 text-sm">Experience:</h5>
+                      <ul className="space-y-1.5 text-sm text-muted-foreground">
+                        <li className="flex items-start gap-2">
+                          <span className="text-primary mt-0.5">•</span>
+                          <span>External auditing (financial services, retail and manufacturing)</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-primary mt-0.5">•</span>
+                          <span>General financial management</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {mobileActiveFounder === 'anne' && (
+                <div className="md:hidden p-6 bg-muted/50 rounded-xl border border-border animate-fade-in">
+                  <div className="space-y-3">
+                    <div>
+                      <h4 className="text-xl font-bold text-foreground mb-1">Anne van Rooyen</h4>
+                      <p className="text-sm font-semibold text-primary">Industrial Engineer</p>
+                    </div>
+                    <div>
+                      <h5 className="font-semibold text-foreground mb-2 text-sm">Experience:</h5>
+                      <ul className="space-y-1.5 text-sm text-muted-foreground">
+                        <li className="flex items-start gap-2">
+                          <span className="text-primary mt-0.5">•</span>
+                          <span>Data management</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-primary mt-0.5">•</span>
+                          <span>Product management</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-primary mt-0.5">•</span>
+                          <span>Information systems</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-primary mt-0.5">•</span>
+                          <span>Startup consulting</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
 

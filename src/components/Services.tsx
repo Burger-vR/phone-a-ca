@@ -65,6 +65,7 @@ const Services = () => {
 
   const handleCardClick = (title: string) => {
     setExpandedCard(expandedCard === title ? null : title);
+    setHoveredCard(null); // Clear hover state on click for mobile
   };
 
   const isCardActive = (title: string) => {
@@ -100,7 +101,7 @@ const Services = () => {
                 <Card
                   className={`relative overflow-hidden transition-all duration-500 border-white/10 bg-gradient-to-br from-[#2a2a2a] to-[#1f1f1f] backdrop-blur-sm cursor-pointer ${
                     isActive
-                      ? 'shadow-[0_20px_60px_rgba(139,92,246,0.3)] scale-[1.02] border-primary/50 z-10'
+                      ? 'shadow-[0_20px_60px_hsl(210_85%_20%_/_0.4)] scale-[1.02] border-primary/50 z-10'
                       : hoveredCard && hoveredCard !== service.title
                       ? 'opacity-60'
                       : 'hover:shadow-[var(--shadow-hover)]'

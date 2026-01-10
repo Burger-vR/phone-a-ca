@@ -23,13 +23,13 @@ const NavigationBar = () => {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border/50 shadow-sm">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-b border-white/10 shadow-sm">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <button
               onClick={() => scrollToSection("hero")}
-              className="text-xl font-bold text-foreground hover:text-primary transition-colors"
+              className="text-xl font-bold text-white hover:text-accent transition-colors"
             >
               Phone-a-CA
             </button>
@@ -40,7 +40,7 @@ const NavigationBar = () => {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-primary hover:bg-primary/5 rounded-lg transition-colors"
+                  className="px-4 py-2 text-sm font-medium text-white/80 hover:text-accent hover:bg-white/10 rounded-lg transition-colors"
                 >
                   {item.label}
                 </button>
@@ -61,7 +61,7 @@ const NavigationBar = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
+              className="md:hidden p-2 text-white hover:text-accent transition-colors"
             >
               {isMobileMenuOpen ? (
                 <X className="h-6 w-6" />
@@ -74,13 +74,13 @@ const NavigationBar = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-background/98 backdrop-blur-md border-t border-border/50">
+          <div className="md:hidden bg-black/98 backdrop-blur-md border-t border-white/10">
             <div className="container mx-auto px-4 py-4 space-y-2">
               {navigationItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="block w-full text-left px-4 py-3 text-base font-medium text-foreground hover:bg-primary/5 rounded-lg transition-colors"
+                  className="block w-full text-left px-4 py-3 text-base font-medium text-white hover:bg-white/10 rounded-lg transition-colors"
                 >
                   {item.label}
                 </button>
