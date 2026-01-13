@@ -17,27 +17,22 @@ const WhoWeHelp = () => {
           </h2>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <ul className="max-w-2xl mx-auto space-y-6">
           {audiences.map((audience, index) => (
-            <div
+            <li
               key={audience.title}
-              className="group relative p-8 rounded-3xl bg-card border border-border hover:border-primary/30 hover:shadow-[var(--shadow-elegant)] transition-all duration-500 animate-scale-in overflow-hidden"
+              className="flex items-center gap-4 animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Gradient overlay */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${audience.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
-
-              <div className="relative z-10">
-                <div className={`mb-6 inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${audience.color} text-white shadow-lg group-hover:scale-110 group-hover:shadow-[var(--shadow-glow)] transition-all duration-300`}>
-                  <audience.icon className="h-8 w-8" strokeWidth={2.5} />
-                </div>
-                <h3 className="text-lg md:text-xl font-bold text-foreground leading-tight group-hover:text-primary transition-colors">
-                  {audience.title}
-                </h3>
+              <div className={`flex-shrink-0 inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-gradient-to-br ${audience.color} text-white shadow-lg`}>
+                <audience.icon className="h-6 w-6" strokeWidth={2.5} />
               </div>
-            </div>
+              <span className="text-lg md:text-xl font-semibold text-foreground">
+                {audience.title}
+              </span>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
 
       {/* Decorative elements */}

@@ -62,25 +62,19 @@ const About = () => {
           <div className="space-y-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
             <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
               <p>
-                Hello there! Burger and Anne van Rooyen here. We <strong>co-founded Phone-a-CA in 2025</strong> with a simple vision:
-                to make <strong>high-quality organisational finance advisory services accessible at a competitive price</strong>.
+                Hello! Burger and Anne van Rooyen here.
               </p>
 
               <p>
-                We believe that entrepreneurs, team leaders, pastors, and principals make better decisions—and
-                build healthier organisations—when they have access to <strong>trusted Chartered Accountants</strong> who
-                understand numbers, businesses, and people.
+                We started Phone-a-CA in 2025 with a simple vision: to <strong>make quality organisational finance guidance as widely accessible as possible</strong>.
               </p>
 
               <p>
-                Phone-a-CA exists to support you with <strong>practical, professional finance guidance</strong>, so you can
-                grow what you're building with confidence.
+                We believe entrepreneurs, team leaders, pastors, principals, <strong>make better decisions</strong>—and build healthier organisations—when they have access to trusted Chartered Accountants who understand numbers, businesses, and people.
               </p>
 
               <p>
-                This is just the beginning. We're excited to journey with South Africans, Africans, and every
-                nation we encounter, as we partner with leaders to build organisations that contribute to a
-                better world.
+                Phone-a-CA is here to give you practical, professional finance guidance so you can grow what you're building with confidence. <strong>Reach out to learn more</strong>—we'd love to connect!
               </p>
 
               <p className="text-xl font-semibold text-foreground pt-2">

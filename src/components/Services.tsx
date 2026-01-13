@@ -83,7 +83,7 @@ const Services = () => {
             What We Offer
           </h2>
           <p className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
-            We provide guidance and advice to assist you in ensuring the below areas within your finance departments are being managed optimally.
+            We provide guidance and advice to assist you in ensuring the below areas within your finance department are managed optimally.
           </p>
         </div>
 
@@ -172,7 +172,7 @@ const Services = () => {
         {/* Referral note */}
         <div className="text-center mt-12 animate-fade-in" style={{ animationDelay: "0.4s" }}>
           <p className="text-base md:text-lg text-white/70 max-w-3xl mx-auto leading-relaxed italic">
-            If your needs fall outside our scope, we will connect you with a trusted service provider or firm from our network.
+            If your need falls outside our scope, we will connect you with a trusted service provider from our professional network.
           </p>
         </div>
       </div>
