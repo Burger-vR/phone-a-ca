@@ -21,11 +21,11 @@ const Hero = () => {
             Instant Chartered Accountant guidance for uncertainties in your organisation's finance function.
           </p>
 
-          <div className="flex justify-center mb-6 px-6 sm:px-4 md:px-0 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+          <div className="flex justify-center mb-6 px-6 md:px-0 animate-fade-in" style={{ animationDelay: "0.2s" }}>
             {/* Primary CTA - Scrolls to Contact Section */}
             <Button
               size="lg"
-              className="group bg-accent hover:bg-accent/90 text-accent-foreground shadow-2xl hover:shadow-[var(--shadow-glow)] transition-all text-sm sm:text-base px-4 sm:px-6 md:px-8 py-5 sm:py-6 rounded-xl font-semibold inline-flex items-start justify-center whitespace-normal text-center leading-snug max-w-sm sm:max-w-md"
+              className="group bg-accent hover:bg-accent/90 text-accent-foreground shadow-2xl hover:shadow-[var(--shadow-glow)] transition-all px-6 md:px-8 py-5 md:py-6 rounded-xl font-semibold inline-flex items-center justify-center text-center leading-snug"
               onClick={() => {
                 const footer = document.getElementById("footer");
                 if (footer) {
@@ -33,10 +33,15 @@ const Hero = () => {
                 }
               }}
             >
-              <Calendar className="mr-2 h-4 sm:h-5 w-4 sm:w-5 flex-shrink-0 group-hover:scale-110 transition-transform mt-0.5" />
-              <span className="flex flex-col">
+              <Calendar className="mr-2 h-5 w-5 flex-shrink-0 group-hover:scale-110 transition-transform" />
+              {/* Mobile: Two lines */}
+              <span className="flex flex-col md:hidden text-sm">
                 <span>Book a Session</span>
                 <span>First 15 Minutes Free</span>
+              </span>
+              {/* Desktop: One line */}
+              <span className="hidden md:inline text-base whitespace-nowrap">
+                Book a Session - First 15 Minutes Free
               </span>
             </Button>
           </div>
