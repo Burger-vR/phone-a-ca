@@ -1,11 +1,46 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <defs>
-    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#082f49;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#1278a8;stop-opacity:1" />
-    </linearGradient>
-  </defs>
-  <rect width="32" height="32" rx="8" fill="url(#grad)"/>
-  <text x="16" y="22" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">CA</text>
-  <circle cx="26" cy="8" r="3" fill="#f97316"/>
+  <!-- Square blue background box with soft edges -->
+  <rect x="1" y="1" width="30" height="30" rx="4" fill="#1e5a8e" />
+
+  <!-- CA Text in White - centered -->
+  <text x="16" y="20" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white" text-anchor="middle">CA</text>
+
+  <!-- Telephone Handset Icon in Orange - positioned OUTSIDE the C, arching around top-left -->
+  <g>
+    <!-- Classic telephone handset - boomerang curve shape -->
+    <!-- Main curved body - thinner middle section -->
+    <path
+      d="M 5.3 6.7 Q 6.7 5.3, 8 6 Q 8.7 6.7, 8.3 8 Q 8 9.3, 7.3 10.7 Q 6.7 12, 6 12.7 Q 5.3 13.3, 4.7 12.7 Q 4 12, 4.3 11"
+      fill="#ff6b35"
+      stroke="#ff6b35"
+      stroke-width="0.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+
+    <!-- Earpiece - rounded top end -->
+    <ellipse
+      cx="6.7"
+      cy="5.7"
+      rx="1.7"
+      ry="1.3"
+      fill="#ff6b35"
+      transform="rotate(-20 6.7 5.7)"
+    />
+
+    <!-- Mouthpiece - rounded bottom end -->
+    <ellipse
+      cx="5"
+      cy="13.3"
+      rx="1.7"
+      ry="1.3"
+      fill="#ff6b35"
+      transform="rotate(-20 5 13.3)"
+    />
+
+    <!-- Speaker holes on earpiece for detail -->
+    <circle cx="6.3" cy="5.3" r="0.3" fill="white" opacity="0.5" />
+    <circle cx="7" cy="5.7" r="0.3" fill="white" opacity="0.5" />
+    <circle cx="6.7" cy="6.1" r="0.3" fill="white" opacity="0.5" />
+  </g>
 </svg>

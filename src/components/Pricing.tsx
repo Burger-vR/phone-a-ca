@@ -100,41 +100,6 @@ const Pricing = () => {
             </CardContent>
           </Card>
         </div>
-
-        {/* Additional info */}
-        <div className="max-w-3xl mx-auto text-center animate-fade-in" style={{ animationDelay: "0.3s" }}>
-          <div className="p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
-            <h3 className="text-xl font-bold text-white mb-3">
-              Not sure if this is the right fit?
-            </h3>
-            <p className="text-white/70 mb-6">
-              Book a free 15-minute discovery call to explore your needs and see whether Phone-a-CA is right for you.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Button
-                size="lg"
-                className="bg-accent hover:bg-accent/90 text-accent-foreground"
-                asChild
-              >
-                <a href="tel:+27781347607">
-                  <Phone className="mr-2 h-5 w-5" />
-                  Call: 078 134 7607
-                </a>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="bg-white/10 border-white/30 text-white hover:bg-white/20"
-                asChild
-              >
-                <a href="https://calendar.app.google/jz4xrFXiK1CvdUdA7" target="_blank" rel="noopener noreferrer">
-                  <Calendar className="mr-2 h-5 w-5" />
-                  Schedule Call
-                </a>
-              </Button>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

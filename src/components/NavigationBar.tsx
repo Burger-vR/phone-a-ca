@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Phone, Menu, X } from "lucide-react";
+import Logo from "./Logo";
 
 const navigationItems = [
   { id: "hero", label: "Home" },
@@ -29,9 +30,10 @@ const NavigationBar = () => {
             {/* Logo */}
             <button
               onClick={() => scrollToSection("hero")}
-              className="text-xl font-bold text-white hover:text-accent transition-colors"
+              className="flex items-center hover:opacity-80 transition-opacity"
+              aria-label="Go to home"
             >
-              Phone-a-CA
+              <Logo />
             </button>
 
             {/* Desktop Navigation */}

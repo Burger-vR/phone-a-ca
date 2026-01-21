@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <!-- Square blue background box with soft edges -->
+  <rect x="2" y="2" width="44" height="44" rx="6" fill="#1e5a8e" />
+
+  <!-- CA Text in White - centered -->
+  <text x="24" y="30" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">CA</text>
+
+  <!-- Telephone Handset Icon in Orange - positioned OUTSIDE the C, arching around top-left -->
+  <g>
+    <!-- Classic telephone handset - boomerang curve shape -->
+    <!-- Main curved body - thinner middle section -->
+    <path
+      d="M 8 10 Q 10 8, 12 9 Q 13 10, 12.5 12 Q 12 14, 11 16 Q 10 18, 9 19 Q 8 20, 7 19 Q 6 18, 6.5 16.5"
+      fill="#ff6b35"
+      stroke="#ff6b35"
+      stroke-width="0.8"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+
+    <!-- Earpiece - rounded top end -->
+    <ellipse
+      cx="10"
+      cy="8.5"
+      rx="2.5"
+      ry="2"
+      fill="#ff6b35"
+      transform="rotate(-20 10 8.5)"
+    />
+
+    <!-- Mouthpiece - rounded bottom end -->
+    <ellipse
+      cx="7.5"
+      cy="20"
+      rx="2.5"
+      ry="2"
+      fill="#ff6b35"
+      transform="rotate(-20 7.5 20)"
+    />
+
+    <!-- Speaker holes on earpiece for detail -->
+    <circle cx="9.5" cy="8" r="0.4" fill="white" opacity="0.5" />
+    <circle cx="10.5" cy="8.5" r="0.4" fill="white" opacity="0.5" />
+    <circle cx="10" cy="9.2" r="0.4" fill="white" opacity="0.5" />
+  </g>
+</svg>

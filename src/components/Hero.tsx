@@ -21,41 +21,20 @@ const Hero = () => {
             Instant Chartered Accountant guidance for uncertainties in your organisation's finance function.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            {/* Primary CTA */}
+          <div className="flex justify-center mb-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+            {/* Primary CTA - Scrolls to Contact Section */}
             <Button
               size="lg"
               className="group bg-accent hover:bg-accent/90 text-accent-foreground shadow-2xl hover:shadow-[var(--shadow-glow)] transition-all text-base px-8 py-6 rounded-xl font-semibold"
-              asChild
+              onClick={() => {
+                const footer = document.getElementById("footer");
+                if (footer) {
+                  footer.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
             >
-              <a href="https://wa.me/27781347607" target="_blank" rel="noopener noreferrer">
-                <MessageCircle className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
-                Start a conversation
-              </a>
-            </Button>
-
-            {/* Secondary CTAs */}
-            <Button
-              size="lg"
-              variant="outline"
-              className="bg-white/10 border-2 border-white/30 text-white hover:bg-white/20 backdrop-blur-md text-base px-8 py-6 rounded-xl font-semibold hover:border-white/50 transition-all"
-              asChild
-            >
-              <a href="tel:+27781347607">
-                <Phone className="mr-2 h-5 w-5" />
-                Call us
-              </a>
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="bg-white/10 border-2 border-white/30 text-white hover:bg-white/20 backdrop-blur-md text-base px-8 py-6 rounded-xl font-semibold hover:border-white/50 transition-all"
-              asChild
-            >
-              <a href="https://calendar.app.google/jz4xrFXiK1CvdUdA7" target="_blank" rel="noopener noreferrer">
-                <Calendar className="mr-2 h-5 w-5" />
-                Book online
-              </a>
+              <Calendar className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+              Book a Session - First 15 Minutes Free
             </Button>
           </div>
 

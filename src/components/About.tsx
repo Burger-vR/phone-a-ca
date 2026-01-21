@@ -62,7 +62,7 @@ const About = () => {
           <div className="space-y-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
             <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
               <p>
-                Hello! Burger and Anne van Rooyen here.
+                Hello there!
               </p>
 
               <p>
@@ -115,6 +115,10 @@ const About = () => {
                             <li className="flex items-start gap-2">
                               <span className="text-primary mt-0.5">•</span>
                               <span>General financial management</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span className="text-primary mt-0.5">•</span>
+                              <span>Finance Consulting</span>
                             </li>
                           </ul>
                         </div>
@@ -185,6 +189,10 @@ const About = () => {
                         <li className="flex items-start gap-2">
                           <span className="text-primary mt-0.5">•</span>
                           <span>General financial management</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-primary mt-0.5">•</span>
+                          <span>Finance Consulting</span>
                         </li>
                       </ul>
                     </div>
