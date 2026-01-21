@@ -13,7 +13,7 @@ const pricingPlan = {
     "Phone, video, or in-person",
     "Same-day availability (subject to capacity)",
     "Pay only for time used",
-    "Billed in 10 minute increments",
+    "Billed in 15 minute increments",
   ],
   gradient: "from-primary/20 to-secondary/20",
 };
@@ -90,7 +90,7 @@ const Pricing = () => {
                 }}
               >
                 <Handshake className="mr-2 h-5 w-5 text-accent" />
-                Start a conversation
+                Start the conversation
               </Button>
 
               {/* Trust marker */}

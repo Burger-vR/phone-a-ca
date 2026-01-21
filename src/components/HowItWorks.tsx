@@ -2,25 +2,25 @@ import { Phone, MessageSquare, CreditCard, Lightbulb } from "lucide-react";
 
 const steps = [
   {
-    number: "01",
+    number: "1",
     icon: Phone,
     title: "Connect with a CA",
     description: "Call, book, or chat with a Chartered Accountant",
   },
   {
-    number: "02",
+    number: "2",
     icon: MessageSquare,
     title: "Discuss your need",
     description: "Share your finance challenge or question",
   },
   {
-    number: "03",
+    number: "3",
     icon: Lightbulb,
     title: "Collaborate and receive expert advice",
     description: "Work together to find practical solutions",
   },
   {
-    number: "04",
+    number: "4",
     icon: CreditCard,
     title: "Pay only for time used",
     description: "Transparent pricing with no hidden fees",

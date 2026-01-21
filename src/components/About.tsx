@@ -66,7 +66,7 @@ const About = () => {
               </p>
 
               <p>
-                We started Phone-a-CA in 2025 with a simple vision: to <strong>make quality organisational finance guidance as widely accessible as possible</strong>.
+                We started Phone-a-CA in 2026 with a simple vision: to <strong>make quality organisational finance guidance as widely accessible as possible</strong>.
               </p>
 
               <p>
@@ -79,7 +79,7 @@ const About = () => {
 
               <p className="text-xl font-semibold text-foreground pt-2">
                 Chat soon,<br />
-                Burger and Anne
+                Burger and Anne van Rooyen
               </p>
             </div>
 
@@ -103,7 +103,7 @@ const About = () => {
                       <div className="space-y-3">
                         <div>
                           <h4 className="text-xl font-bold text-foreground mb-1">Burger van Rooyen</h4>
-                          <p className="text-sm font-semibold text-primary">Qualified Chartered Accountant</p>
+                          <p className="text-sm font-semibold text-primary">Registered Chartered Accountant (SA)</p>
                         </div>
                         <div>
                           <h5 className="font-semibold text-foreground mb-2 text-sm">Experience:</h5>
@@ -177,7 +177,7 @@ const About = () => {
                   <div className="space-y-3">
                     <div>
                       <h4 className="text-xl font-bold text-foreground mb-1">Burger van Rooyen</h4>
-                      <p className="text-sm font-semibold text-primary">Qualified Chartered Accountant</p>
+                      <p className="text-sm font-semibold text-primary">Registered Chartered Accountant (SA)</p>
                     </div>
                     <div>
                       <h5 className="font-semibold text-foreground mb-2 text-sm">Experience:</h5>
