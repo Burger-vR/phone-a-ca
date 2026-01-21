@@ -85,8 +85,9 @@ const About = () => {
 
             {/* Founder Action Buttons - directly below text */}
             <div className="space-y-4 pt-4">
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  {/* Burger Button - HoverCard on desktop, click on mobile */}
+              <div className="flex flex-col gap-4">
+                {/* Burger Button - HoverCard on desktop, click on mobile */}
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <HoverCard openDelay={200}>
                     <HoverCardTrigger asChild>
                       <Button
@@ -125,8 +126,39 @@ const About = () => {
                       </div>
                     </HoverCardContent>
                   </HoverCard>
+                </div>
 
-                  {/* Anne Button - HoverCard on desktop, click on mobile */}
+                {/* Mobile-only Burger info display - appears right after Burger button */}
+                {mobileActiveFounder === 'burger' && (
+                  <div className="md:hidden p-6 bg-muted/50 rounded-xl border border-border animate-fade-in">
+                    <div className="space-y-3">
+                      <div>
+                        <h4 className="text-xl font-bold text-foreground mb-1">Burger van Rooyen</h4>
+                        <p className="text-sm font-semibold text-primary">Registered Chartered Accountant (SA)</p>
+                      </div>
+                      <div>
+                        <h5 className="font-semibold text-foreground mb-2 text-sm">Experience:</h5>
+                        <ul className="space-y-1.5 text-sm text-muted-foreground">
+                          <li className="flex items-start gap-2">
+                            <span className="text-primary mt-0.5">•</span>
+                            <span>External auditing (financial services, retail and manufacturing)</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <span className="text-primary mt-0.5">•</span>
+                            <span>General financial management</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <span className="text-primary mt-0.5">•</span>
+                            <span>Finance Consulting</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Anne Button - HoverCard on desktop, click on mobile */}
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <HoverCard openDelay={200}>
                     <HoverCardTrigger asChild>
                       <Button
@@ -168,69 +200,42 @@ const About = () => {
                         </div>
                       </div>
                     </HoverCardContent>
-                </HoverCard>
+                  </HoverCard>
+                </div>
+
+                {/* Mobile-only Anne info display - appears right after Anne button */}
+                {mobileActiveFounder === 'anne' && (
+                  <div className="md:hidden p-6 bg-muted/50 rounded-xl border border-border animate-fade-in">
+                    <div className="space-y-3">
+                      <div>
+                        <h4 className="text-xl font-bold text-foreground mb-1">Anne van Rooyen</h4>
+                        <p className="text-sm font-semibold text-primary">Industrial Engineer</p>
+                      </div>
+                      <div>
+                        <h5 className="font-semibold text-foreground mb-2 text-sm">Experience:</h5>
+                        <ul className="space-y-1.5 text-sm text-muted-foreground">
+                          <li className="flex items-start gap-2">
+                            <span className="text-primary mt-0.5">•</span>
+                            <span>Data management</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <span className="text-primary mt-0.5">•</span>
+                            <span>Product management</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <span className="text-primary mt-0.5">•</span>
+                            <span>Information systems</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <span className="text-primary mt-0.5">•</span>
+                            <span>Startup consulting</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
-
-              {/* Mobile-only founder info display */}
-              {mobileActiveFounder === 'burger' && (
-                <div className="md:hidden p-6 bg-muted/50 rounded-xl border border-border animate-fade-in">
-                  <div className="space-y-3">
-                    <div>
-                      <h4 className="text-xl font-bold text-foreground mb-1">Burger van Rooyen</h4>
-                      <p className="text-sm font-semibold text-primary">Registered Chartered Accountant (SA)</p>
-                    </div>
-                    <div>
-                      <h5 className="font-semibold text-foreground mb-2 text-sm">Experience:</h5>
-                      <ul className="space-y-1.5 text-sm text-muted-foreground">
-                        <li className="flex items-start gap-2">
-                          <span className="text-primary mt-0.5">•</span>
-                          <span>External auditing (financial services, retail and manufacturing)</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="text-primary mt-0.5">•</span>
-                          <span>General financial management</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="text-primary mt-0.5">•</span>
-                          <span>Finance Consulting</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {mobileActiveFounder === 'anne' && (
-                <div className="md:hidden p-6 bg-muted/50 rounded-xl border border-border animate-fade-in">
-                  <div className="space-y-3">
-                    <div>
-                      <h4 className="text-xl font-bold text-foreground mb-1">Anne van Rooyen</h4>
-                      <p className="text-sm font-semibold text-primary">Industrial Engineer</p>
-                    </div>
-                    <div>
-                      <h5 className="font-semibold text-foreground mb-2 text-sm">Experience:</h5>
-                      <ul className="space-y-1.5 text-sm text-muted-foreground">
-                        <li className="flex items-start gap-2">
-                          <span className="text-primary mt-0.5">•</span>
-                          <span>Data management</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="text-primary mt-0.5">•</span>
-                          <span>Product management</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="text-primary mt-0.5">•</span>
-                          <span>Information systems</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="text-primary mt-0.5">•</span>
-                          <span>Startup consulting</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              )}
             </div>
           </div>
 

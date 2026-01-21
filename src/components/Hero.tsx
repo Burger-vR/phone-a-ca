@@ -21,11 +21,11 @@ const Hero = () => {
             Instant Chartered Accountant guidance for uncertainties in your organisation's finance function.
           </p>
 
-          <div className="flex justify-center mb-6 px-4 md:px-0 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+          <div className="flex justify-center mb-6 px-6 sm:px-4 md:px-0 animate-fade-in" style={{ animationDelay: "0.2s" }}>
             {/* Primary CTA - Scrolls to Contact Section */}
             <Button
               size="lg"
-              className="group bg-accent hover:bg-accent/90 text-accent-foreground shadow-2xl hover:shadow-[var(--shadow-glow)] transition-all text-base px-6 md:px-8 py-6 rounded-xl font-semibold w-full md:w-auto max-w-md"
+              className="group bg-accent hover:bg-accent/90 text-accent-foreground shadow-2xl hover:shadow-[var(--shadow-glow)] transition-all text-sm sm:text-base px-4 sm:px-6 md:px-8 py-5 sm:py-6 rounded-xl font-semibold inline-flex items-center justify-center whitespace-normal text-center leading-tight max-w-sm sm:max-w-md"
               onClick={() => {
                 const footer = document.getElementById("footer");
                 if (footer) {
@@ -33,8 +33,8 @@ const Hero = () => {
                 }
               }}
             >
-              <Calendar className="mr-2 h-5 w-5 flex-shrink-0 group-hover:scale-110 transition-transform" />
-              <span className="leading-snug">Book a Session - First 15 Minutes Free</span>
+              <Calendar className="mr-2 h-4 sm:h-5 w-4 sm:w-5 flex-shrink-0 group-hover:scale-110 transition-transform" />
+              <span>Book a Session - First 15 Minutes Free</span>
             </Button>
           </div>
 
