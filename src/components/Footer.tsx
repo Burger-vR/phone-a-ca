@@ -76,11 +76,18 @@ const Footer = () => {
                 className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold shadow-lg hover:shadow-xl transition-all"
                 asChild
               >
-                <a href="https://wa.me/27781347607" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/27781347607?text=Hi%20Phone-a-CA%2C%20I%27d%20like%20to%20learn%20more%20about%20your%20services%20and%20book%20a%20free%2015-minute%20call.%20Thanks%21" target="_blank" rel="noopener noreferrer">
                   Message Us
                 </a>
               </Button>
             </div>
+          </div>
+
+          {/* Tagline */}
+          <div className="text-center mb-8 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+            <p className="text-lg md:text-xl text-white/80 italic">
+              Phone-a-CA — bringing clarity and confidence to your organisation's finances.
+            </p>
           </div>
 
           {/* Copyright */}
